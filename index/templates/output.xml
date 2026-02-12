@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-02-12T16:50:48.412941" rpa="false" schemaversion="5">
+<suite id="s1" name="000 mainTest" source="C:\Users\piyada.boor\Downloads\kitchensync-main\kitchensync-main\index\templates\000_mainTest.robot">
+<test id="s1-t1" name="Open KitchenSync Homepage" line="5">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-02-12T16:50:48.764310" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\piyada.boor\\Downloads\\kitchensync-main\\kitchensync-main\\index\\templates\\browser\\traces\\temp\\97dea50e-67d7-4e6b-b39e-fd586d04d2d2"}</msg>
+<msg time="2026-02-12T16:50:48.766309" level="FAIL">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] The system cannot find the file specified</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-02-12T16:50:48.763313" elapsed="0.009002">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] The system cannot find the file specified</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-02-12T16:50:48.772315" elapsed="0.000999"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>http://127.0.0.1:8000/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2026-02-12T16:50:48.773314" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>body</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-02-12T16:50:48.773314" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2026-02-12T16:50:48.773314" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-12T16:50:48.774322" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-12T16:50:48.762313" elapsed="0.012009">Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] The system cannot find the file specified</status>
+</test>
+<status status="FAIL" start="2026-02-12T16:50:48.414943" elapsed="0.365374"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="000 mainTest" id="s1" pass="0" fail="1" skip="0">000 mainTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-12T16:50:48.778312" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] The system cannot find the file specified</msg>
+<msg time="2026-02-12T16:50:48.784320" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] The system cannot find the file specified</msg>
+</errors>
+</robot>

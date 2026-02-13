@@ -280,7 +280,7 @@
       font-weight: 600;
     }
 
-    .btn-primary {
+    /* .btn-primary {
       background: #1976D2;
       color: #fff;
       border-color: #1976D2;
@@ -288,6 +288,38 @@
 
     .btn-primary:hover {
       background: #1565C0;
+    } */
+    .btn-primary {
+      background: linear-gradient(135deg, #1565C0 0%, #1565C0 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #1565C0 0%, #1565C0 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 234, 255, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 10px rgba(233, 223, 223, 0.3);
+    }
+
+    .btn-primary::before {
+      content: '▶';
+      font-size: 14px;
     }
 
     .hidden {
@@ -407,9 +439,9 @@
 
               <div class="qty-editor" data-iid="{{ ing.id }}" data-iname="{{ ing.name|escapejs }}"
                 data-qty="{{ ing.quantity }}">
-                <button type="button" class="qty-step" data-step="-1">-</button>
+                <button type="button" class="qty-step" id="qty-minus-{{ ing.id }}" data-step="-1">-</button>
                 <span class="qty-delta" id="delta-{{ ing.id }}">0</span>
-                <button type="button" class="qty-step" data-step="1">+</button>
+                <button type="button" class="qty-step" id="qty-plus-{{ ing.id }}" data-step="1">+</button>
               </div>
 
               <div class="confirm-bar hidden" id="confirm-{{ ing.id }}">
@@ -1101,8 +1133,19 @@
       const title = data.title || fallbackName || '';
       document.getElementById('howtoTitle').textContent = title;
 
+      // const ing = (data.ingredients || []);
+      // document.getElementById('howtoIngredients').textContent = ing.length ? ('วัตถุดิบ: ' + ing.join(', ')) : '';
       const ing = (data.ingredients || []);
-      document.getElementById('howtoIngredients').textContent = ing.length ? ('วัตถุดิบ: ' + ing.join(', ')) : '';
+
+      const ingText = ing.map(i => {
+        if (typeof i === 'string') return i;
+        if (typeof i === 'object' && i !== null) {
+
+          return i.name || i.title || i.ingredient || i.text || JSON.stringify(i);
+        }
+        return String(i);
+      }).filter(Boolean).join(', ');
+      document.getElementById('howtoIngredients').textContent = ingText ? ('วัตถุดิบ: ' + ingText) : '';
 
       const stepsWrap = document.getElementById('howtoSteps');
       stepsWrap.innerHTML = '';
@@ -1110,31 +1153,41 @@
       if (steps.length) {
         steps.forEach(s => {
           const li = document.createElement('li');
-          li.textContent = s;
+          // Handle both string and object steps
+          if (typeof s === 'string') {
+            li.textContent = s;
+          } else if (typeof s === 'object' && s !== null) {
+            li.textContent = s.text || s.content || s.step || s.instruction || JSON.stringify(s);
+          } else {
+            li.textContent = String(s);
+          }
           stepsWrap.appendChild(li);
         });
       } else {
         const li = document.createElement('li'); li.textContent = 'ยังไม่มีขั้นตอนในระบบ'; stepsWrap.appendChild(li);
       }
 
+      // const links = document.getElementById('howtoLinks');
+      // links.innerHTML = '';
+      // const yt = document.createElement('a');
+      // yt.href = buildYTHowtoLink(title);
+      // yt.target = '_blank'; yt.rel = 'noopener';
+      // yt.className = 'btn-primary';
+      // yt.style.display = 'inline-block';
+      // yt.textContent = 'ไปดูบน YouTube';
+      // links.appendChild(yt);
       const links = document.getElementById('howtoLinks');
       links.innerHTML = '';
+      links.style.marginTop = '16px';
+      links.style.display = 'flex';
+      links.style.justifyContent = 'center';
+
       const yt = document.createElement('a');
       yt.href = buildYTHowtoLink(title);
       yt.target = '_blank'; yt.rel = 'noopener';
       yt.className = 'btn-primary';
-      yt.style.display = 'inline-block';
-      yt.textContent = 'ไปดูบน YouTube';
+      yt.textContent = 'ดูวิธีทำบน YouTube';
       links.appendChild(yt);
-
-      (data.videos || []).forEach(v => {
-        const a = document.createElement('a');
-        a.href = v.url; a.target = '_blank'; a.rel = 'noopener';
-        a.style.marginLeft = '8px';
-        a.textContent = v.title || v.url;
-        links.appendChild(a);
-      });
-
       document.getElementById('howtoModal').style.display = 'flex';
     }
 

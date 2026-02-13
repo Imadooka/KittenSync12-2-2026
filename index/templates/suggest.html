@@ -537,7 +537,7 @@
       }
     });
 
-    window.CURRENT_INGREDIENTS = {{ ingredient_names_json | safe }};
+    window.CURRENT_INGREDIENTS = JSON.parse('{{ ingredient_names_json | safe | default:"[]" }}');
 
     // ================== Daily Recommendations ==================
     async function loadDailyRecs() {

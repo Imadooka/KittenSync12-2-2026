@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-02-13T14:36:38.071910" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.12.9 on win32)" generated="2026-02-13T16:40:39.737231" rpa="false" schemaversion="5">
 <suite id="s1" name="000 mainTest" source="C:\Users\piyada.boor\Downloads\kitchensync-main\kitchensync-main\index\templates\000_mainTest.robot">
 <kw name="Open Browser To Homepage" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-02-13T14:36:38.362895" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 50.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\piyada.boor\\Downloads\\kitchensync-main\\kitchensync-main\\index\\templates\\browser\\traces\\temp\\16339087-6891-4668-9262-647edd26d716"}</msg>
-<msg time="2026-02-13T14:36:38.385894" level="INFO">Starting Browser process c:\Users\piyada.boor\Downloads\kitchensync-main\kitchensync-main\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:64879</msg>
-<msg time="2026-02-13T14:36:39.681730" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":50,"timeout":30000,"tracesDir":"C:\\Users\\piyada.boor\\Downloads\\kitchensync-main\\kitchensync-main\\index\\templates\\browser\\traces\\temp\\16339087-6891-4668-9262-647edd26d716"}</msg>
+<msg time="2026-02-13T16:40:40.081185" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 50.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\piyada.boor\\Downloads\\kitchensync-main\\kitchensync-main\\index\\templates\\browser\\traces\\temp\\d3b0964f-d3cf-4538-9ae3-7d5b759a28d2"}</msg>
+<msg time="2026-02-13T16:40:40.104160" level="INFO">Starting Browser process c:\Users\piyada.boor\Downloads\kitchensync-main\kitchensync-main\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55229</msg>
+<msg time="2026-02-13T16:40:41.459423" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":50,"timeout":30000,"tracesDir":"C:\\Users\\piyada.boor\\Downloads\\kitchensync-main\\kitchensync-main\\index\\templates\\browser\\traces\\temp\\d3b0964f-d3cf-4538-9ae3-7d5b759a28d2"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <arg>slowMo=50ms</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-02-13T14:36:38.362895" elapsed="1.318835"/>
+<status status="PASS" start="2026-02-13T16:40:40.080174" elapsed="1.380253"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-02-13T14:36:39.686725" level="INFO">{
+<msg time="2026-02-13T16:40:41.463419" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -26,207 +26,238 @@
   "serviceWorkers": "allow",
   "viewport": null
 }</msg>
-<msg time="2026-02-13T14:36:39.717723" level="INFO">Successfully created context. </msg>
-<msg time="2026-02-13T14:36:39.717723" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
+<msg time="2026-02-13T16:40:41.495423" level="INFO">Successfully created context. </msg>
+<msg time="2026-02-13T16:40:41.495423" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
 <arg>viewport=None</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-02-13T14:36:39.682724" elapsed="0.034999"/>
+<status status="PASS" start="2026-02-13T16:40:41.460427" elapsed="0.034996"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-02-13T14:36:40.280719" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:8000/</msg>
+<msg time="2026-02-13T16:40:42.134348" level="INFO">Successfully initialized new page object and opened url: http://127.0.0.1:8000/</msg>
 <arg>url=http://127.0.0.1:8000/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-02-13T14:36:39.717723" elapsed="0.562996"/>
+<status status="PASS" start="2026-02-13T16:40:41.496424" elapsed="0.638924"/>
 </kw>
-<status status="PASS" start="2026-02-13T14:36:38.361891" elapsed="1.918828"/>
+<status status="PASS" start="2026-02-13T16:40:40.079183" elapsed="2.056165"/>
 </kw>
 <test id="s1-t1" name="Test 1 : Open Homepage" line="16">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-13T14:36:40.323719" level="INFO">Waited for Element with selector body at state visible</msg>
+<msg time="2026-02-13T16:40:42.176343" level="INFO">Waited for Element with selector body at state visible</msg>
 <arg>body</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-13T14:36:40.292721" elapsed="0.032001"/>
+<status status="PASS" start="2026-02-13T16:40:42.145354" elapsed="0.030989"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2026-02-13T14:36:40.329718" level="INFO">Title: 'วัตถุดิบในครัว'</msg>
-<msg time="2026-02-13T14:36:40.329718" level="INFO">${title} = วัตถุดิบในครัว</msg>
+<msg time="2026-02-13T16:40:42.182348" level="INFO">Title: 'วัตถุดิบในครัว'</msg>
+<msg time="2026-02-13T16:40:42.182348" level="INFO">${title} = วัตถุดิบในครัว</msg>
 <var>${title}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-02-13T14:36:40.324722" elapsed="0.004996"/>
+<status status="PASS" start="2026-02-13T16:40:42.176343" elapsed="0.006005"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-13T14:36:42.331705" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-02-13T16:40:44.183435" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-13T14:36:40.330731" elapsed="2.000974"/>
+<status status="PASS" start="2026-02-13T16:40:42.182348" elapsed="2.001087"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>วัตถุดิบในครัว</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-13T14:36:42.332485" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-13T16:40:44.183976" elapsed="0.001137"/>
 </kw>
-<status status="PASS" start="2026-02-13T14:36:40.280719" elapsed="2.051766"/>
+<status status="PASS" start="2026-02-13T16:40:42.135348" elapsed="2.049819"/>
 </test>
 <test id="s1-t2" name="Test 2 : Search Menu Test" line="22">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-02-13T14:36:42.346486" level="INFO">Fills the text 'น่องไก่' in the given field.</msg>
+<msg time="2026-02-13T16:40:44.200287" level="INFO">Fills the text 'น่องไก่' in the given field.</msg>
 <arg>id=searchBox</arg>
 <arg>น่องไก่</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:42.345503" elapsed="0.075067"/>
+<status status="PASS" start="2026-02-13T16:40:44.199732" elapsed="0.082763"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-13T14:36:47.423025" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-02-13T16:40:49.284531" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-13T14:36:42.421576" elapsed="5.001449"/>
+<status status="PASS" start="2026-02-13T16:40:44.282495" elapsed="5.002036"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-13T14:36:47.458757" level="INFO">Text: 'น่องไก่ (x4)'</msg>
-<msg time="2026-02-13T14:36:47.458757" level="INFO">${menu_name} = น่องไก่ (x4)</msg>
+<msg time="2026-02-13T16:40:49.324525" level="INFO">Text: 'น่องไก่ (x7)'</msg>
+<msg time="2026-02-13T16:40:49.324525" level="INFO">${menu_name} = น่องไก่ (x7)</msg>
 <var>${menu_name}</var>
 <arg>h3:has-text("น่องไก่")</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:47.423719" elapsed="0.035038"/>
+<status status="PASS" start="2026-02-13T16:40:49.285522" elapsed="0.039003"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${menu_name}</arg>
 <arg>น่องไก่</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-02-13T14:36:47.459754" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-13T16:40:49.324525" elapsed="0.001010"/>
 </kw>
-<status status="PASS" start="2026-02-13T14:36:42.340479" elapsed="5.119275"/>
+<status status="PASS" start="2026-02-13T16:40:44.194146" elapsed="5.131389"/>
 </test>
 <test id="s1-t3" name="Test 3 : Add Ingredient Quantity Test" line="28">
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-13T14:36:47.504761" level="INFO">Text: '0'</msg>
-<msg time="2026-02-13T14:36:47.504761" level="INFO">${before} = 0</msg>
+<msg time="2026-02-13T16:40:49.369526" level="INFO">Text: '0'</msg>
+<msg time="2026-02-13T16:40:49.370537" level="INFO">${before} = 0</msg>
 <var>${before}</var>
 <arg>id=delta-3</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:47.489784" elapsed="0.014977"/>
+<status status="PASS" start="2026-02-13T16:40:49.354537" elapsed="0.016000"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-02-13T14:36:47.505767" level="INFO">Clicks the element 'css=button#qty-plus-3[data-step="1"]'.</msg>
+<msg time="2026-02-13T16:40:49.371530" level="INFO">Clicks the element 'css=button#qty-plus-3[data-step="1"]'.</msg>
 <arg>css=button#qty-plus-3[data-step="1"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:47.504761" elapsed="0.098751"/>
+<status status="PASS" start="2026-02-13T16:40:49.370537" elapsed="0.095183"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-13T14:36:50.606124" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-13T16:40:52.467592" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-13T14:36:47.604517" elapsed="3.001607"/>
+<status status="PASS" start="2026-02-13T16:40:49.466709" elapsed="3.000883"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-13T14:36:50.625768" level="INFO">Text: '1'</msg>
-<msg time="2026-02-13T14:36:50.625768" level="INFO">${after} = 1</msg>
+<msg time="2026-02-13T16:40:52.487337" level="INFO">Text: '1'</msg>
+<msg time="2026-02-13T16:40:52.487337" level="INFO">${after} = 1</msg>
 <var>${after}</var>
 <arg>id=delta-3</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:50.606766" elapsed="0.019002"/>
+<status status="PASS" start="2026-02-13T16:40:52.468361" elapsed="0.018976"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-02-13T14:36:50.627762" level="INFO">${expected} = 1</msg>
+<msg time="2026-02-13T16:40:52.488337" level="INFO">${expected} = 1</msg>
 <var>${expected}</var>
 <arg>int(${before}) + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-02-13T14:36:50.626763" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-13T16:40:52.487337" elapsed="0.001000"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-13T14:36:50.628759" level="INFO">Argument types are:
+<msg time="2026-02-13T16:40:52.489334" level="INFO">Argument types are:
 &lt;class 'str'&gt;
 &lt;class 'int'&gt;</msg>
 <arg>${after}</arg>
 <arg>${expected}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-13T14:36:50.628759" elapsed="0.000998"/>
+<status status="PASS" start="2026-02-13T16:40:52.489334" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-13T14:36:53.630541" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-13T16:40:55.491228" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-13T14:36:50.629757" elapsed="3.000784"/>
+<status status="PASS" start="2026-02-13T16:40:52.490338" elapsed="3.000890"/>
 </kw>
-<status status="PASS" start="2026-02-13T14:36:47.484758" elapsed="6.145783"/>
+<status status="PASS" start="2026-02-13T16:40:49.349529" elapsed="6.141699"/>
 </test>
 <test id="s1-t4" name="Test 4 : Navigate to Ingredient Detail Page" line="40">
 <kw name="Click" owner="Browser">
-<msg time="2026-02-13T14:36:53.647538" level="INFO">Clicks the element 'css=img[alt="น่องไก่"]'.</msg>
+<msg time="2026-02-13T16:40:55.504237" level="INFO">Clicks the element 'css=img[alt="น่องไก่"]'.</msg>
 <arg>css=img[alt="น่องไก่"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:36:53.646560" elapsed="0.089983"/>
+<status status="PASS" start="2026-02-13T16:40:55.503243" elapsed="0.105009"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-02-13T14:36:53.743532" level="INFO">Waited for Element with selector css=.modal-panel at state visible</msg>
+<msg time="2026-02-13T16:40:55.615237" level="INFO">Waited for Element with selector css=.modal-panel at state visible</msg>
 <arg>css=.modal-panel</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-02-13T14:36:53.736543" elapsed="0.006989"/>
+<status status="PASS" start="2026-02-13T16:40:55.608252" elapsed="0.007985"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-13T14:37:03.745304" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-02-13T16:41:05.617125" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-13T14:36:53.744533" elapsed="10.000771"/>
+<status status="PASS" start="2026-02-13T16:40:55.616237" elapsed="10.000888"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-02-13T14:37:03.765012" level="INFO">Text: 'เมนูจาก: น่องไก่'</msg>
-<msg time="2026-02-13T14:37:03.766010" level="INFO">${menu_Name} = เมนูจาก: น่องไก่</msg>
+<msg time="2026-02-13T16:41:05.635843" level="INFO">Text: 'เมนูจาก: น่องไก่'</msg>
+<msg time="2026-02-13T16:41:05.635843" level="INFO">${menu_Name} = เมนูจาก: น่องไก่</msg>
 <var>${menu_Name}</var>
 <arg>id=recipeTitle</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-02-13T14:37:03.746018" elapsed="0.019992"/>
+<status status="PASS" start="2026-02-13T16:41:05.617837" elapsed="0.018006"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${menu_Name}</arg>
 <arg>เมนูจาก: น่องไก่</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-13T14:37:03.766010" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-13T16:41:05.636838" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-13T14:36:53.640541" elapsed="10.126467"/>
+<status status="PASS" start="2026-02-13T16:40:55.499233" elapsed="10.138604"/>
 </test>
-<status status="PASS" start="2026-02-13T14:36:38.072896" elapsed="25.701123"/>
+<test id="s1-t5" name="Test 5 : Test YouTube Button" line="51">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-13T16:41:07.650279" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-13T16:41:05.648838" elapsed="2.001441"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-02-13T16:41:07.651052" level="INFO">Clicks the element 'css=button.howto-btn &gt;&gt; nth=0'.</msg>
+<arg>css=button.howto-btn &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-02-13T16:41:07.651052" elapsed="0.087737"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-13T16:41:09.739982" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-13T16:41:07.738789" elapsed="2.001193"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-02-13T16:41:09.740794" level="INFO">Clicks the element 'text=ดูวิธีทำบน YouTube'.</msg>
+<arg>text=ดูวิธีทำบน YouTube</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-02-13T16:41:09.740794" elapsed="0.126370"/>
+</kw>
+<status status="PASS" start="2026-02-13T16:41:05.644839" elapsed="4.222325"/>
+</test>
+<status status="PASS" start="2026-02-13T16:40:39.738223" elapsed="30.137936"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="000 mainTest" id="s1" pass="4" fail="0" skip="0">000 mainTest</stat>
+<stat name="000 mainTest" id="s1" pass="5" fail="0" skip="0">000 mainTest</stat>
 </suite>
 </statistics>
 <errors>

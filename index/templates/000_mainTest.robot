@@ -44,6 +44,31 @@ Test 4 : Navigate to Ingredient Detail Page
 
     ${menu_Name}=    Get Text    id=recipeTitle
     Should Be Equal    ${menu_Name}    เมนูจาก: น่องไก่
+    # Click    css=button.modal-x
+    # Sleep    2s
+    # Wait For Elements State    css=#recipeModal    hidden
 
+Test 5 : Test YouTube Button
+    sleep    2s
+    Click    css=button.howto-btn >> nth=0
+    Sleep    2s
+    Click    text=ดูวิธีทำบน YouTube
+    Sleep    5s
+    
 
+*** Comments ***
+Test 6 : Test Recipe Display
+    # ทดสอบว่าเมนูแสดงถูกต้อง (ไม่มี [object Object])
+    Click    css=img[alt="น่องไก่"]
+    Wait For Elements State    css=.modal-panel    visible
+    ${recipe_text}=    Get Text    css=.recipe-meta
+    Should Not Contain    ${recipe_text}    [object Object]
+
+Test 7 : Test Ingredient Details Display
+    # ทดสอบว่าวัตถุดิบในป๊อปอัปแสดงถูกต้อง
+    Click    css=img[alt="น่องไก่"]
+    Click    css=button.howto-btn
+    Wait For Elements State    id=howtoModal    visible
+    ${ingredients}=    Get Text    id=howtoIngredients
+    Should Not Contain    ${ingredients}    [object Object]
 
